@@ -8,29 +8,30 @@ This class requires the Wordpress [XMLRPC Client by Hieu Le](https://github.com/
 Progress to here is merely a working class that abstracts away some of the nitty-gritty of preparing and importing data from another system into Wordrpress.  We have used this data pump to import hundreds of blogs posts in varying formats into Wordpress.
 
 ## Dependencies
-* "hieu-le/wordpress-xmlrpc-client":"~2.0"
-
-## TODO
-* Better logging and error reporting options.
-* More input checking and error prevention.
-* Build out more input options
-* Add a config file for allowing customization of how things are handled, such as:
-	* Switch to add gallery shortcodes to associated posts or not.
-	* Switch to add featured image or not.
-	* Gallery shortcodes additional options.
-	* Caption and excerpt handling.
-	* To name a few.
+* [XMLRPC Client by Hieu Le](https://github.com/letrunghieu/wordpress-xmlrpc-client)
 
 ## Setup
+### Composer
+You will need to use [Composer](https://getcomposer.org/) to add the above-mentioned dependenices to your project.  Simply include (or create) the following in a `composer.json` file in the root of your project folder and run `composer update` to get set up.
 
-You will need to use Composer to add the above-mentioned dependenices to your project.  We plan to implement this project in the same way at some point.
+	{
+			"repositories": [
+				{
+					"type": "vcs",
+					"url": "https://github.com/ClearPathDigital/WordPressDataPump"
+				}
+			],
+			"require": {
+					"ClearPathDigital/WordPressDataPump":">=0.0.1"
+			}
+	}
 
 ## Usage Example
+
 	$endpoint = 'https://www.yourwpsite.com/xmlrpc.php';
 	$username = 'username';
 	$password = 'password';
 
-	require('path/to/WordpressDataPump.php');
 	$WPDP = new \ClearPathDigital\WordpressDataPump\WordpressDataPump($endpoint, $username, $password);
 
 	$WPDP->setDate('Today');
@@ -41,10 +42,3 @@ You will need to use Composer to add the above-mentioned dependenices to your pr
 	$WPDP->addTerm('post_tag', 'TestTag2');
 	$WPDP->addMedia('path/to/picture.jpeg', 'WordpressDataPump Test Image', 'This is a caption for a test image uploaded by WordpressDataPump.');
 	$WPDP->createPost();
-
-
-
-
-
-
-?>

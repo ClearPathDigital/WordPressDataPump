@@ -41,7 +41,7 @@ class WordpressDataPump
 		$this->client = new \HieuLe\WordpressXmlrpcClient\WordpressClient();
 		$this->client->setCredentials( $endpoint, $username, $password );
 		$this->client->onError( function( $error, $event ) {
-	    $this->error( "Error: [{$error}]: ".print_r( $event,1 ) );
+			$this->error( "Error: [{$error}]: ".print_r( $event,1 ) );
 		} );
 		$this->post = new \StdClass();
 	}

@@ -10,9 +10,9 @@
 			"homepage": "https://www.clearpathdigital.com/"
 		}
 	],
-  "require": {
-      "hieu-le/wordpress-xmlrpc-client":"~2.0"
-  },
+	"require": {
+			"hieu-le/wordpress-xmlrpc-client":"~2.0"
+	},
 	"autoload": {
 			"psr-4" : {
 					"ClearPathDigital\\WordpressDataPump\\" : ""
