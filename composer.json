@@ -1,0 +1,21 @@
+{
+	"name": "clearpathdigital/wordpressdatapump",
+	"description": "A PHP data pump for importing blog posts from another system into Wordpress via the the XML-RPC WordPress API.",
+	"keywords": ["wordpress", "xmlrpc", "client", "remote", "api"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "ClearPath Digital",
+			"email": "info@clearpathdigital.com",
+			"homepage": "https://www.clearpathdigital.com/"
+		}
+	],
+  "require": {
+      "hieu-le/wordpress-xmlrpc-client":"~2.0"
+  },
+	"autoload": {
+			"psr-4" : {
+					"ClearPathDigital\\WordpressDataPump\\" : ""
+			}
+	}
+}
