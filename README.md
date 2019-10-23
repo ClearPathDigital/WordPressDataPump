@@ -22,7 +22,7 @@ You will need to use [Composer](https://getcomposer.org/) to add the above-menti
 				}
 			],
 			"require": {
-					"ClearPathDigital/WordPressDataPump":">=0.0.1"
+					"clearpathdigital/wordpressdatapump":">=0.0.1"
 			}
 	}
 
